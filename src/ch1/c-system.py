@@ -1,7 +1,7 @@
 from langchain_core.messages import HumanMessage, SystemMessage
-from src.model import get_model
+from src.model import get_model_together
 
-model = get_model()
+model = get_model_together()
 
 system_msg = SystemMessage(
     "You are a helpful assistant that responds to human's question with three exclamation marks."

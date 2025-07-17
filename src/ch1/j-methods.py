@@ -1,6 +1,6 @@
-from src.model import get_model
+from src.model import get_model_together
 
-model = get_model()
+model = get_model_together()
 
 completion = model.invoke("Hi there!")
 

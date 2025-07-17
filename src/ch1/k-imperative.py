@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import chain
-from src.model import get_model
+from src.model import get_model_together
 
 template = ChatPromptTemplate(
     [
@@ -9,7 +9,7 @@ template = ChatPromptTemplate(
     ]
 )
 
-model = get_model()
+model = get_model_together()
 
 @chain
 def chatbot(values):

@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from src.model import get_model
+from src.model import get_model_together
 
 class AnswerWithJustification(BaseModel):
     """An answer to the user's question along with justification for the answer."""
@@ -9,7 +9,7 @@ class AnswerWithJustification(BaseModel):
     justification: str
     """Justification for the answer"""
 
-model = get_model()
+model = get_model_together()
 structured_model = model.with_structured_output(AnswerWithJustification)
 
 response = structured_model.invoke(

@@ -1,7 +1,7 @@
 from langchain_core.prompts import PromptTemplate
-from src.model import get_model
+from src.model import get_model_together
 
-model = get_model()
+model = get_model_together()
 
 template = PromptTemplate.from_template("""Answer the question based on the context below. If the question cannot be answered using the information provided, answer with "I don't know".
 

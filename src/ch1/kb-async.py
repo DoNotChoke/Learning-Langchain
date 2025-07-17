@@ -1,6 +1,6 @@
 from langchain_core.runnables import chain
 from langchain_core.prompts import ChatPromptTemplate
-from src.model import get_model
+from src.model import get_model_together
 template = ChatPromptTemplate.from_messages(
     [
         ("system", "You are a helpful assistant."),
@@ -8,7 +8,7 @@ template = ChatPromptTemplate.from_messages(
     ]
 )
 
-model = get_model()
+model = get_model_together()
 
 @chain
 async def chatbot(values):
